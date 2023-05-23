@@ -1,0 +1,20 @@
+body {
+    background-color: aquamarine;
+}
+
+li {
+    list-style-type: none;
+}
+
+.header_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_list ul {
+    font-size: 25px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
