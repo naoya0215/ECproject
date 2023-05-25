@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="../css/admin.css" rel="stylesheet">
+    <link href="../../css/admin.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>店舗一覧</title>
 </head>
 <body>        
     <div class="header_wrapper">
         <div class="icon_form">
-            <img src="../img/shop1.png" alt="rogo">
+            <img src="../../img/shop1.png" alt="rogo">
         </div>
         <form method="POST" action="{{ route('admin.logout') }}">
             @csrf
@@ -21,7 +21,7 @@
     </div> 
     <div class="header_list">
         <ul>
-            <li>店舗登録</li>
+            <li><a href="{{ route('admin.shops.create') }}">店舗登録</a></li>
             <li>商品登録</li>
             <li>商品一覧</li>
         </ul>
@@ -37,14 +37,20 @@
                 <th>店舗について</th>
                 <th>削除</th>
             </tr>
+            @foreach ($shops as $shop)
             <tr>
-                <td>編集</td>
-                <td>ここに画像が入ります</td>
-                <td>ここに店名が入ります</td>
-                <td>ここに住所が入ります</td>
-                <td>ここに内容が入ります</td>
-                <td>削除</td>
+                <td><button onclick="location.href='{{ route('admin.shops.edit', ['shop' => $shop->id ])}}' ">編集</button></td>
+                <td class="image_form"><img src="{{ Storage::url($shop->image) }}"></td>
+                <td>{{ $shop->name }}</td>
+                <td>{{ $shop->address }}</td>
+                <td>{{ $shop->information }}</td>
+                <form id="delete_{{$shop->id}}" method="post" action="{{ route('admin.shops.destroy', ['shop' => $shop->id ] )}}">
+                    @csrf
+                    @method('delete')
+                    <td><button>削除</button></td>
+                </form>
             </tr>
+            @endforeach
         </table>
     </div>  
 </body>
