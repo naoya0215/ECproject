@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\Auth\RegisteredUserController;
 use App\Http\Controllers\Admin\Auth\VerifyEmailController;
 use App\Http\Controllers\Admin\ShopController;
+use App\Http\Controllers\Admin\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,10 +37,12 @@ Route::prefix('shops')->
         Route::delete('destroy/{shop}', [ShopController::class, 'destroy'])->name('shops.destroy');
 });
 
+Route::resource('products', ProductController::class)->except(['show'])
+->middleware('auth:admin');
+
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth:admin'])->name('dashboard');
-
 
 Route::middleware('guest')->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])

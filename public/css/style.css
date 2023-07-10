@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  text-align: left;
+  list-style-type: none;
+  border-collapse: collapse;
+}
+
+textarea {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+img {
+  border-style: none;
+  display: block;
+}
+
+hr {
+  display: none;
+}
+
+em {
+  font-style: normal
+}
+
+input {
+  line-height: auto;
+  vertical-align: middle;
+}
+
+strong.more {
+  color: #c30
+}
+
+a {
+  text-decoration: none;
+}
+
+
+body {
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Ｐゴシック', sans-serif;
+  background-color:antiquewhite;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*　ここから記述　*/
+
+/*header*/
+
+.header_wrapper {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header_wrapper ul {
+  display: flex;
+  width: 50%;
+}
+
+.header_wrapper ul li {
+  margin: auto;
+  color: #000;
+}
+
+.header_wrapper img {
+  width: 7%;
+  height: auto;
+}
+
+/*main*/
+.top_image {
+  position: relative;
+}
+
+.top_image img {
+  width: 100%;
+  height: auto;
+}
+
+.top_image h1 {
+  width: 70%;
+  font-size: 65px;
+  color: aqua;
+  font-weight: bold;
+  font-family: "Kokoro";
+  position: absolute;
+  top: 0;
+  margin-top: 210px;
+  margin-left: 150px;
+}
+
+.main_box {
+  width: 98%;
+  margin: auto;
+  background-color: rgb(70, 229, 17);
+  border-radius: 30px;
+}
+
+.main_left {
+  margin-top: 20px;
+  display: flex;
+}
+
+.main_left img {
+  width: 50%;
+  height: auto;
+}
+
+.main_right {
+  display: flex;
+}
+
+.main_right img {
+  width: 50%;
+  height: auto;
+}
+
+.main_text {
+  margin: 50px 0 0 20px;
+  width: 50%;
+}
+
+.main_text h1{
+  font-size: 40px;
+  font-weight: 500;
+  font-family: "Kokoro";
+}
+
+.main_text p {
+  margin-top: 30px;
+  font-family: "Kokoro";
+}
+
+.main_grid {
+  width: 98%;
+  margin: 10px auto;
+  display: grid;
+  grid-template: "grid-item img .......";
+}
+
+.grid_item img {
+  margin: 5px 5px;
+  width: 98%;
+  height: 300px;
+}
+
+.swiper_text {
+  width: 98%;
+  margin: auto;
+}
+
+.swiper_text h1 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Kokoro";
+}
+
+.swiper_text p {
+  margin: 30px 0;
+  font-family: "Kokoro";
+}
+
+.container {
+  width: 98%;
+  margin: 0 auto;
+}
+
+/* スライダーのwrapper */
+.infinite-slider .swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+/* スライド */
+.infinite-slider .swiper-slide {
+  height: 320px !important; /* 高さを指定 */
+  width: auto !important;
+}
+
+/* スライド内の画像 */
+.infinite-slider .swiper-slide img {
+  width: 98%;
+  height: 100%;
+}
+
+/*footer*/
+
+.footer_wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+  background-color: #27e1a6;
+  height: 300px;
+}
+
+.footer_box {
+  padding-top: 100px;
+}
+
+.footer_box li {
+  color: #696969;
+}

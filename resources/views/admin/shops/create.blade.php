@@ -10,7 +10,7 @@
 <body>        
     <div class="header_wrapper">
         <div class="icon_form">
-            <img src="../../img/shop1.png" alt="rogo">
+            <a href="{{ route('admin.shops.index') }}"><img src="../../img/shop1.png" alt="rogo"></a>
         </div>
         <form method="POST" action="{{ route('admin.logout') }}">
             @csrf
@@ -26,8 +26,12 @@
             <div class="form_box">
                 <div class="text_border">下記の項目を入力の上登録ボタンを押してください</div>
                     <div class="form_list">
-                        <label for="name">店舗名<span class="red">*</span></label><br>
-                        <input type="text" id="name" name="name" placeholder="店舗名" value="{{ old('name') }}">
+                        <label for="name">店名[都道府県]<span class="red">*</span></label><br>
+                        <select class="name" id="name" name="name">
+                            @foreach (Config::get('pref.pref_name') as $key => $val)
+                                <option value="{{ $key }}">{{ $val }}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="form_list">
                         <label for="address">店舗住所<span class="red">*</span></label><br>
@@ -38,7 +42,7 @@
                         <input type="text" id="information" name="information" placeholder="店舗について" value="{{ old('information') }}">
                     </div>
                     <div class="form_list">
-                        <label for="image">画像<span class="red">*</span></label><br>
+                        <label for="image">店舗画像<span class="red">*</span></label><br>
                         <input type="file" id="image" name="image" multiple accept=“image/png,image/jpeg/jpg”>
                     </div>
                     <div class="form_button">

@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Models\Shop;
+use App\Models\Product;
+
 
 class Admin extends Authenticatable
 {
@@ -46,5 +48,12 @@ class Admin extends Authenticatable
         //hasOneで1対1の関係でリレーション
         //Shopを指定
         return $this->hasOne(Shop::class);
+    }
+
+    public function Product()
+    {
+        //hasOneで1対1の関係でリレーション
+        //Shopを指定
+        return $this->hasOne(Product::class);
     }
 }

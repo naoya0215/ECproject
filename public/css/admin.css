@@ -11,6 +11,10 @@ img {
     height: 150px;
 }
 
+span {
+    color: red;
+}
+
 .image_form {
     width: 30%;
 }
@@ -43,6 +47,7 @@ table{
     width: 100%;
     border-collapse:separate;
     border-spacing: 0;
+    background-color: #f4f4f4;
 }
   
 table th:first-child{
@@ -126,6 +131,19 @@ table tr:last-child td:first-child {
 .form_list {
     text-align: left;
     margin-top: 20px;
+}
+
+#name {
+    font-size: 16px;
+    height: 40px;
+    width: 50%;
+    border-radius: 1px;
+}
+
+#category {
+    font-size: 16px;
+    height: 40px;
+    width: 25%;
 }
 
 input {
