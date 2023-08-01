@@ -1,0 +1,87 @@
+body {
+    background-color: aquamarine;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    width: 300px;
+    height: 150px;
+}
+
+span {
+    color: red;
+}
+
+.image_form {
+    width: 30%;
+}
+
+.icon_form img {
+    width: 15%;
+    height: auto;
+    margin-left: 30px;
+}
+
+.header_wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header_list ul {
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main_list {
+    width: 90%;
+    margin: 80px auto;
+}
+
+.product_wrapper {
+    width: 100%;
+}
+
+.product_box {
+    background-color: #f4f4f4;
+    text-align: center;
+    width: 100%;
+}
+
+.red {
+    font-size: 12px;
+    color: red;
+}
+
+.name_key {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Ｐゴシック', sans-serif;
+}
+
+.keyword {
+    width: 300px;
+    height: 35px;
+    font-size: 18px;
+    border-radius: 1px;
+}
+
+.search_btn {
+    font-size: 15px;
+    width: 50px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 1px;
+}
+
+
+/* show.blade.php */
+
+.main_center {
+    text-align: center;
+}

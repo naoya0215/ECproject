@@ -1,3 +1,135 @@
+@charset "UTF-8";
+
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  text-align: left;
+  list-style-type: none;
+  border-collapse: collapse;
+}
+
+textarea {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+img {
+  border-style: none;
+  display: block;
+}
+
+hr {
+  display: none;
+}
+
+em {
+  font-style: normal
+}
+
+input {
+  line-height: auto;
+  vertical-align: middle;
+}
+
+strong.more {
+  color: #c30
+}
+
+a {
+  text-decoration: none;
+}
+
+
 body {
-    background-color: beige;
+    background: -moz-linear-gradient(45deg, #02e1ba 0%, #26c9f2 29%, #d911f2 66%, #ffa079 100%);
+    background: -webkit-linear-gradient(45deg, #02e1ba 0%,#26c9f2 29%,#d911f2 66%,#ffa079 100%);
+    background: linear-gradient(45deg, #02e1ba 0%,#26c9f2 29%,#d911f2 66%,#ffa079 100%);
+}
+
+/*　ここから記述　*/
+
+img {
+    width: 300px;
+    height: 180px;
+}
+
+.icon_form img {
+    width: 15%;
+    height: auto;
+    margin-left: 30px;
+}
+
+.header_wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.red {
+  font-size: 12px;
+  color: red;
+}
+
+.name_key {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Ｐゴシック', sans-serif;
+}
+
+.keyword {
+  width: 300px;
+  height: 35px;
+  font-size: 18px;
+  border-radius: 1px;
+}
+
+.search_btn {
+  font-size: 15px;
+  width: 50px;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 1px;
+}
+
+.main_list {
+    width: 90%;
+    margin: 80px auto;
+}
+
+.main_list h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.main_content {
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: space-between;
+}
+
+.item_border{
+    border: 1px solid #000;
+    border-radius: 3px;
+    background-color:#f4f4f4;
+    margin: 20px 0;
+}
+
+.content {
+    color: #000;
+    background-color:#cdcdcd;
+    margin: 5px;
+}
+
+@media (max-width: 900px) {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 }

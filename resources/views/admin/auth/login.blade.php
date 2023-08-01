@@ -1,51 +1,91 @@
-<x-guest-layout>
-    <x-auth-card>
-        管理者用
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
-
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('admin.login') }}">
-            @csrf
-
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../css/adminlogin.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理者ログイン</title>
+</head>
+<body>
+    <header>
+        <div class="header_wrapper">
+            <div class="header_logo">
+                <a href="{{ url('/') }}"><img src="../img/logo001.png" alt="ロゴ画像"></a>
             </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
+            <div class="menu">
+                <li class="menu_list"><a href="{{ url('user.menu') }}">商品一覧</a></li>
+                <li class="menu_list"><a href="{{ url('user.action') }}">利用方法</a></li>
+                <li class="menu_list"><a href="{{ route('user.login') }}">ログイン</a></li>
             </div>
-
-            <!-- Remember Me -->
-            <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('admin.password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('admin.password.request') }}">
-                        {{ __('Forgot your password?') }}
+            <button type="button" class="btn js-btn">
+                <span class="btn-line"></span>
+            </button>
+        </div>
+    </header>
+    <div class="flex_wrapper">
+        <div class="page_list">
+            <h1><span>Admin</span>page</h1>
+            <p><a href="{{ route('user.login') }}">管理者の方はこちら</a></p>
+        </div>
+        <div class="login">
+            <x-auth-session-status class="mb-4" :status="session('status')" />
+            <x-auth-validation-errors class="mb-4" :errors="$errors" />
+            <form method="POST" action="{{ route('admin.login') }}">
+                @csrf
+                <div class="text_login">
+                    <h3>メールアドレス</h3>
+                    <label for="email" :value="__('Email')" >
+                    <input id="email" class="admin_login" type="email" name="email" :value="old('email')" required autofocus >
+                </div>
+                <div class="text_login">
+                    <h3>パスワード</h3>
+                    <label for="password" :value="__('Password')" >
+                    <input id="password" class="admin_login" type="password" name="password" required autocomplete="current-password" >
+                </div>
+                <button class="login_button">
+                    {{ __('ログイン') }}
+                </button>  
+                <div class="reset_login">
+                    <a class="reset_pass" href="{{ route('admin.register') }}">
+                        {{ __('新規登録はこちら') }}
                     </a>
-                @endif
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_wrapper">
+            <ul class="footer_box">
+                <li>紹介</li>
+                <li>XXXXXXXXXXXX</li>
+                <li>XXXXXXXXXXXX</li>
+                <li>XXXXXXXXXXXX</li>
+            </ul>
+            <ul class="footer_box">
+                <li>実績</li>
+                <li>XXXXXXXXXXXX</li>
+                <li>XXXXXXXXXXXX</li>
+                <li>XXXXXXXXXXXX</li>
+            </ul>
+            <ul class="footer_box">
+                <li>お問い合わせ</li>
+                <li>XXXXXXXXXXXX</li>
+                <li>XXXXXXXXXXXX</li>
+                <li>XXXXXXXXXXXX</li>
+            </ul>
+            <ul class="footer_box">
+                <li>トップ</li>
+                <li>XXXXXXXXXXXX</li>
+                <li>XXXXXXXXXXXX</li>
+                <li>XXXXXXXXXXXX</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
+        
 
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+        
