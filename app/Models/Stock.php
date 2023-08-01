@@ -9,7 +9,7 @@ class Stock extends Model
 {
     use HasFactory;
 
-    //トランザクションテーブル
+    //よく処理が発生するトランザクションテーブル
     protected $table = 't_stocks';
 
     protected $fillable = [

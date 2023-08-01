@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\Auth\RegisteredUserController;
 use App\Http\Controllers\Admin\Auth\VerifyEmailController;
 use App\Http\Controllers\Admin\ShopController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\NoticeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +36,16 @@ Route::prefix('shops')->
         Route::get('edit/{shop}', [ShopController::class, 'edit'])->name('shops.edit');
         Route::post('update/{shop}', [ShopController::class, 'update'])->name('shops.update');
         Route::delete('destroy/{shop}', [ShopController::class, 'destroy'])->name('shops.destroy');
+});
+
+Route::prefix('notices')->
+    middleware('auth:admin')->group(function(){
+        Route::get('index', [NoticeController::class, 'index'])->name('notices.index');
+        Route::get('create', [NoticeController::class, 'create'])->name('notices.create');
+        Route::post('store', [NoticeController::class, 'store'])->name('notices.store');
+        Route::get('edit/{notice}', [NoticeController::class, 'edit'])->name('notices.edit');
+        Route::post('update/{notice}', [NoticeController::class, 'update'])->name('notices.update');
+        Route::delete('destroy/{notice}', [NoticeController::class, 'destroy'])->name('notices.destroy');
 });
 
 Route::resource('products', ProductController::class)->except(['show'])

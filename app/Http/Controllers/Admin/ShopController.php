@@ -15,6 +15,12 @@ use App\Http\Requests\UpdateShopRequest;
 
 class ShopController extends Controller
 {
+
+    public function __construct() 
+    {
+        $this->middleware('auth:admin');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -44,6 +50,7 @@ class ShopController extends Controller
      */
     public function store(StoreShopRequest $request)
     {
+
         // 画像フォームでリクエストした画像を取得
         $img = $request->file('image');
 

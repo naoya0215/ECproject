@@ -24,7 +24,10 @@ class UpdateShopRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|string|max:255',
+            'address' => 'required|string|max:255',
+            'information' => 'required',
+            'image' => 'required|image|mimes:jpg,jpeg,png|max:2048',
         ];
     }
 }

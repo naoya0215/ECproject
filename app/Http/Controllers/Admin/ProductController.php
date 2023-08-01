@@ -12,9 +12,17 @@ use App\Models\Shop;
 use App\Models\Admin;
 use App\Models\Stock;
 use App\Models\PrimaryCategory;
+use App\Http\Requests\StoreProductRequest;
+use App\Http\Requests\UpdateProductRequest;
 
 class ProductController extends Controller
 {
+
+    public function __construct() 
+    {
+        $this->middleware('auth:admin');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -53,7 +61,7 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreProductRequest $request)
     {
         try {
             DB::transaction(function () use($request) {
@@ -127,7 +135,7 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateProductRequest $request, $id)
     {
         $product = Product::findOrFail($id);
         $quantity = Stock::where('product_id', $product->id)->sum('quantity');

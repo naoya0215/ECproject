@@ -1,3 +1,5 @@
+<!--
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -23,83 +25,56 @@
     </header>
     <main>
         <div class="main_wrapper">
-            <div class="top_image">
-                <img src="img/top_gift.jpg" alt="トップイメージ">
-                <h1>人生には価値がある<br>
-                    自由な心が生まれる場所へ
-                </h1>
-            </div>
             <div class="main_box">
-                <div class="main_left">
-                    <img src="img/gift001.jpg" alt="メイン画像">
-                    <div class="main_text">
-                        <h1>これまでの道のり</h1>
-                        <p>
-                            仕立てのいい服を着たときのような 自由な心が生まれる場所へ<br>
-                            心のこもった料理を食べたときのような 生きる力が生まれる場所へ<br>
-                            新しいものが好きな人と 時に磨かれたものが好きな人 その両方に 愛される場所でありたい<br>
-                            これまでにないものを一番に実現する あなたにとっての一番を追求する<br>
-                            人生は素晴らしい 生きることには価値がある 心の底からそう思える日々のために<br>
-                            時代の感性をもった、いいものにいいと言える人のためのマンション<br>
-                            きっと、あなたに似合うと思います<br>
-                        </p>
+                <div class="product_list">
+                    <div class="list_left">商品一覧</div>
+                    <div class="list_right">
+                        <div class="grid_list">商品</div>
+                        <div class="grid_list">商品</div>
+                        <div class="grid_list">商品</div>
+                        <div class="grid_list">商品</div>
+                        <div class="grid_list">商品</div>
+                        <div class="grid_list">商品</div>
+                        <div class="grid_list">商品</div>
+                        <div class="grid_list">商品</div>
+                        <div class="grid_list">商品</div>
+                        <div class="grid_list">商品</div>
                     </div>
-                </div>
-                <div class="main_right">
-                    <div class="main_text">
-                        <h1>これまでの道のり</h1>
-                        <p>
-                            仕立てのいい服を着たときのような 自由な心が生まれる場所へ<br>
-                            心のこもった料理を食べたときのような 生きる力が生まれる場所へ<br>
-                            新しいものが好きな人と 時に磨かれたものが好きな人 その両方に 愛される場所でありたい<br>
-                            これまでにないものを一番に実現する あなたにとっての一番を追求する<br>
-                            人生は素晴らしい 生きることには価値がある 心の底からそう思える日々のために<br>
-                            時代の感性をもった、いいものにいいと言える人のためのマンション<br>
-                            きっと、あなたに似合うと思います<br>
-                        </p>
-                    </div>
-                    <img src="img/gift001.jpg" alt="メイン画像">
                 </div>
             </div>
         </div>
-        <div class="main_grid">
-            <div class="grid_item">
-                <img src="img/gift001.jpg" alt="grid">
-            </div>
-            <div class="grid_item">
-                <img src="img/gift002.jpg" alt="grid">
-            </div>
-            <div class="grid_item">
-                <img src="img/gift003.jpg" alt="grid">
-            </div>
-            <div class="grid_item">
-                <img src="img/gift004.jpg" alt="grid">
-            </div>
-            <div class="grid_item">
-                <img src="img/gift005.jpg" alt="grid">
-            </div>
-            <div class="grid_item">
-                <img src="img/gift006.jpg" alt="grid">
-            </div>
+        <div class="img_inner">
+            <img class="img" src="img/gift007.jpg" alt="gift">
+            <img class="img" src="img/gift008.jpg" alt="gift">
+            <img class="img" src="img/gift009.jpg" alt="gift">
+            <img class="img" src="img/gift010.jpg" alt="gift">
         </div> 
-        <div class="main_swiper">
-            <div class="swiper_text">
-                <h1>それでもやる、頭と、心と、手を動かして</h1>
-                <p>
-                    何万回も衝突実験をして 何百キロも走り続けて<br>
-                    一つ一つ安全性をつみあげていく まだないものはつくればいい 多くの人が使えなければ意味がない<br>
-                    ひとりにひとつのいのち そのためにHondaは、二輪でも四輪でも 交通事故死亡者ゼロを目指し続ける <br>
-                    その道のりは果てしない それでもやる、頭と、心と、手を動かして<br>
-                </p>
+        <div class="main_notice">
+            <div class="notice">
+                <div class="content">
+                    <h1>お知らせ</h1>
+                    
+                </div>
+                
             </div>
-            <div class="container">
-                <div class="swiper infinite-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/gift007.jpg" alt="swiper" /></div>
-                        <div class="swiper-slide"><img src="img/gift008.jpg" alt="swiper" /></div>
-                        <div class="swiper-slide"><img src="img/gift009.jpg" alt="swiper" /></div>
-                        <div class="swiper-slide"><img src="img/gift010.jpg" alt="swiper" /></div>
-                    </div>
+            <div class="news">
+                <h1>NEWS</h1>
+                <div class="news_wrapper">
+                    <p>何万回も衝突実験をして 何百キロも走り続けて</p>
+                    <p>何万回も衝突実験をして 何百キロも走り続けて</p>
+                    <p>何万回も衝突実験をして 何百キロも走り続けて</p>
+                    <p>何万回も衝突実験をして 何百キロも走り続けて</p>
+                    <p>何万回も衝突実験をして 何百キロも走り続けて</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="swiper infinite-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/gift007.jpg" alt="swiper" /></div>
+                    <div class="swiper-slide"><img src="img/gift008.jpg" alt="swiper" /></div>
+                    <div class="swiper-slide"><img src="img/gift009.jpg" alt="swiper" /></div>
+                    <div class="swiper-slide"><img src="img/gift010.jpg" alt="swiper" /></div>
                 </div>
             </div>
         </div>
@@ -132,9 +107,11 @@
             </ul>
         </div>
     </footer>
-    <!-- CDN読み込み -->
+    
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <!-- JSファイル読み込み -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
+

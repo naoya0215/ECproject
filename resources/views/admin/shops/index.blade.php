@@ -24,6 +24,7 @@
             <li><a href="{{ route('admin.shops.create') }}">店舗登録</a></li>
             <li><a href="{{ route('admin.products.create') }}">商品登録</a></li>
             <li><a href="{{ route('admin.products.index') }}">商品一覧</a></li>
+            <li><a href="{{ route('admin.notices.index') }}">お知らせ一覧</a></li>
         </ul>
     </div> 
     <div class="main_list">

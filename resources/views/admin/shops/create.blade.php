@@ -25,6 +25,7 @@
             <h2>店舗登録</h2>
             <div class="form_box">
                 <div class="text_border">下記の項目を入力の上登録ボタンを押してください</div>
+                <x-auth-validation-errors class="error" :errors="$errors" /> 
                     <div class="form_list">
                         <label for="name">店名[都道府県]<span class="red">*</span></label><br>
                         <select class="name" id="name" name="name">

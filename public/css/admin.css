@@ -102,6 +102,11 @@ table tr:last-child td:first-child {
     margin: auto;
 }
 
+.error {
+    color: red;
+    text-align: left;
+}
+
 .form_boxs h1 {
     border-bottom: 1px solid #c0c0c0;
     font-size: 18px;
